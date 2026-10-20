@@ -1,0 +1,6 @@
+file_format: "1"
+id: macropad6
+name: MacroPad6
+type: shield
+requires: [nice_nano]
+features: [keys]
