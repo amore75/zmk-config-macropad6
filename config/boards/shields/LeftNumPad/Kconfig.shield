@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: MIT
+
+config SHIELD_LeftNumPad
+    def_bool $(shields_list_contains,LeftNumPad)

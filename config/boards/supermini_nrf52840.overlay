@@ -1,0 +1,25 @@
+/* Battery sensing for Supermini nRF52840.
+ * Try VDDH first; if your board doesn’t expose VDDH, switch to zmk,battery-nrf-vdd instead.
+ */
+
+&adc {
+    status = "okay";
+};
+
+ / {
+    vbatt: vbatt {
+        /* If VDDH is not present on your hardware, change the line below to:
+         * compatible = "zmk,battery-nrf-vdd";
+         */
+        compatible = "zmk,battery-nrf-vddh";
+        status = "okay";
+    };
+
+    aliases {
+        battery = &vbatt;
+    };
+
+    chosen {
+        zmk,battery = &vbatt;
+    };
+};
