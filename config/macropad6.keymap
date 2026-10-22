@@ -1,3 +1,17 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-/ { keymap { compatible = "zmk,keymap"; default_layer { display-name = "Default"; bindings = <&none &none &none &none &none &none>; }; }; };
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "Default";
+            bindings = <
+&kp LC(A)   &kp K_UNDO
+&kp K_COPY  &kp K_PASTE
+&kp DELETE  &kp ENTER
+            >;
+        };
+    };
+};
